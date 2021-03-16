@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/danil/CLionProjects/lab1_vector/main.c
+C:/Users/danil/CLionProjects/lab1_vector/vector.c
+vector.h
+C:/Users/danil/CLionProjects/lab1_vector/vector.h
+string.h
+-
 stdio.h
 -
 stdlib.h
 -
-vector.h
-C:/Users/danil/CLionProjects/lab1_vector/vector.h
 
 C:/Users/danil/CLionProjects/lab1_vector/vector.h
 stdint.h

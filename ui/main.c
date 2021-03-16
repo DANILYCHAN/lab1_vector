@@ -5,6 +5,21 @@
 const char *MSGS[] = {"0. Quit", "1. Choose type of data", "2. Entering the dimension of vectors", "3. Entering vector elements", "4. Vector addition", "5. Dot product of vectors"};
 const int MSGS_SIZE = sizeof(MSGS) / sizeof(MSGS[0]);
 
+int Dialog(const char *msgs[], int n) {
+    char *error = "";
+    int choice = -1;
+    do {
+        printf("%s", error);
+        error = "You're wrong. Try again!\n";
+        for (int i = 0; i < n; ++i) {
+            printf("%s\n", msgs[i]);
+        }
+        printf("Make your choice: \n");
+        scanf("%d", &choice);
+    } while (choice < 0 || choice >= n);
+    return choice;
+}
+
 int dialog(const char *msgs[], int n) {
     char *error = "";
     int choice;
@@ -28,7 +43,7 @@ int main() {
     vector *res = NULL;
     EL *mir = NULL;
     do {
-        c = dialog(MSGS, MSGS_SIZE);
+        c = Dialog(MSGS, MSGS_SIZE);
         switch(c) {
             case 0:
                 break;

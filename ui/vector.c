@@ -113,4 +113,5 @@ vector out(vector *a) {
     for (int i = 0; i < a->size; i++) {
         a->type->out(a->data, i);
     }
+    printf("\n");
 }
